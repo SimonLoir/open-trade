@@ -1,0 +1,29 @@
+.open-trade-base-element {
+    position: relative;
+    background-color: rgb(45, 45, 45);
+    $tool-size: 50px;
+    $tool-top-height: 20px;
+    & .left-toolbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: $tool-size;
+    }
+    & .top-toolbox {
+        position: absolute;
+        top: 0;
+        left: $tool-size;
+        right: 0;
+        height: $tool-top-height;
+    }
+    & canvas {
+        position: absolute;
+        top: $tool-top-height;
+        left: $tool-size;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - #{$tool-size});
+        height: calc(100% - #{$tool-top-height});
+    }
+}
