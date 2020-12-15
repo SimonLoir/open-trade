@@ -2,8 +2,8 @@ import '../scss/style.scss';
 import OpenTrade from './open-trade';
 import OpenTradeGraph from './open-trade/graph';
 (async function () {
-    new OpenTradeGraph('#container', {});
-    new OpenTrade();
+    const ot = new OpenTrade();
+    ot.createGraph('#container', {});
 
     console.log(await getData());
 })();
